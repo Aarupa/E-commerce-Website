@@ -5,9 +5,12 @@ function Card({ data }) {
 
     const { image, Name, description, price } = data;
 
-    const { dispatch } = useContext(cartContext);
+    const {shopping: { cart } , dispatch } = useContext(cartContext);
 
     function addToCart() {
+        if(cart.includes(data))
+            return;
+
         dispatch({
             type: "add",
             product: data
