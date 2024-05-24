@@ -18,15 +18,15 @@ function Card({ data }) {
     }
 
     return (
-        <div>
+        <div className="mt-11 ">
             <div>
-                <img src={image} />
+                <img src={image} style={{width :'300px' , height : '300px' , borderRadius:'8px'}}/>
             </div>
             <div>
                 <h3 className="font-bold text-xl">{Name}</h3>
-                <p>{description}</p>
+                {/* <p>{description}</p> */}
                 <p>Rs. {price}</p>
-                <button onClick={addToCart} className="bg-yellow-500 rounded-md p-2">Add To Card</button>
+                <button onClick={addToCart} className="bg-yellow-500 rounded-md p-1">Add To Card</button>
             </div>
         </div>
     );
